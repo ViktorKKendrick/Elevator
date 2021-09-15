@@ -24,4 +24,16 @@
 - currentFloor --> Prints the floor the elevator is on
 - elevatorUp --> currentFloor+=1
 - elevatorDown --> currentFloor-=1
-- elevatorStop --> 
+- elevatorStop --> currentFloor === onPress() OR currentFloor === calledFloor()
+- doorOpen --> currentFloor === onPress() || currentFloor === calledFloor()
+- doorClose --> (elevatorUp = True || elevatorDown = True) && currentFloor !== onPress()
+- Set doorAtDestination() --> elevatorStop and doorOpen and stays open for predetermined time
+- Set onPress() --> button tells elevator what floor number was pressed and adds to array
+- Set floorQueue --> array for floors selected. List order is done by order of onPress(). Spliced by if a different button is closer or calledFloor() is closer
+- Set emerStop() --> emergency stop, overrides all previous and future commands and implements elevatorStop and doorClose
+- Set calledFloor() --> tells elevator what floor passenger called it to and splices floor number into array
+- Set elevaDirect() --> tells elevator to go up or down.
+- isButtonSelected --> True or False
+- buttonOn --> Turns button light on if isButtonSelected() === True
+- Set floorLevel()  --> print currentFloor as elevator passes it or stops at it
+
