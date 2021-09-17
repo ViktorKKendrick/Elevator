@@ -37,4 +37,4 @@
 - isButtonSelected --> True or False
 - buttonOn --> Turns button light on if isButtonSelected() === True
 - Set floorLevel()  --> print currentFloor as elevator passes it or stops at it
-
+- Set helpbutton() --> sends a signal to the front desk that the elevator is broken or is in a state of emergency.
